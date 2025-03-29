@@ -1,0 +1,134 @@
+:root {
+    --bg-color: #f5f5f5;
+    --calculator-bg: #2d2d2d;
+    --display-bg: #1a1a1a;
+    --btn-bg: #3b3b3b;
+    --btn-hover: #4d4d4d;
+    --operator-bg: #ff9500;
+    --operator-hover: #ffaa33;
+    --equals-bg: #ff5e3a;
+    --equals-hover: #ff7b5e;
+    --clear-bg: #a5a5a5;
+    --clear-hover: #b8b8b8;
+    --text-light: #ffffff;
+    --text-dark: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.calculator {
+    background-color: var(--calculator-bg);
+    border-radius: 20px;
+    padding: 20px;
+    width: 320px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+.display {
+    grid-column: span 4;
+    background-color: var(--display-bg);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 10px;
+    text-align: right;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.previous-operand {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    height: 1.2rem;
+    overflow: hidden;
+}
+
+.current-operand {
+    color: var(--text-light);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+button {
+    border: none;
+    border-radius: 50px;
+    height: 60px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: var(--text-light);
+    background-color: var(--btn-bg);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.number {
+    background-color: var(--btn-bg);
+}
+
+.number:hover {
+    background-color: var(--btn-hover);
+}
+
+.operator {
+    background-color: var(--operator-bg);
+    font-weight: 600;
+}
+
+.operator:hover {
+    background-color: var(--operator-hover);
+}
+
+#clear {
+    background-color: var(--clear-bg);
+    color: var(--text-dark);
+}
+
+#clear:hover {
+    background-color: var(--clear-hover);
+}
+
+#equals {
+    background-color: var(--equals-bg);
+}
+
+#equals:hover {
+    background-color: var(--equals-hover);
+}
+
+#delete {
+    background-color: var(--clear-bg);
+    color: var(--text-dark);
+}
+
+#delete:hover {
+    background-color: var(--clear-hover);
+}
+
+.span-two {
+    grid-column: span 2;
+}
